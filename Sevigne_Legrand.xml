@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- Version corrigée prenant en compte les remarques d'Ariane Pinche
+-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Lettres de Madame de Sévigné</title>
+            <author>Marquise de Sévigné </author>
+            <respStmt>
+               <resp>Encodage réalisé dans le cadre du devoir à la maison du Master TNAH</resp>
+               <persName>
+                  <forename>Anne</forename>
+                  <surname>Legrand</surname>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Dalibon</publisher>
+            <pubPlace>Paris</pubPlace>
+            <date when="1823">1823</date>
+         </publicationStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title type="main">Lettres de Madame de Sévigné</title>
+                  <title type="subtitles">Tome Second</title>
+                  <author><name>Madame de Sévigné</name>
+                     <persName xml:id="Sevigne">
+                        <forename>Marie</forename>
+                        <surname>Sévigné</surname>
+                        <nameLink>de</nameLink>
+                        <roleName>Marquise</roleName>
+                     </persName></author>
+                  <editor><name>Gault de Saint-Germain</name>
+                     <persName xml:id="GDSG">
+                        <forename>Pierre-Marie</forename>
+                        <surname>Gault de Saint-Germain</surname>
+                        <roleName>Editeur scientifique</roleName>
+                     </persName></editor>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>Dalibon</publisher>
+                  <pubPlace>Paris</pubPlace>
+                  <date when="1823">1823</date>
+                  <distributor facs="https://gallica.bnf.fr/ark:/12148/bpt6k6317685j/f7.image"
+                     >BnF</distributor>
+                  <availability>
+                     <licence>Domaine public</licence>
+                  </availability>
+               </publicationStmt>
+               <seriesStmt>
+                  <title>Lettre de Madame de Sévigné, tome II</title>
+                  <biblScope unit="page" from="01" to="10">pp. 1-10</biblScope>
+
+               </seriesStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <quotation marks="all"/>
+         </editorialDecl>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <listPlace>
+               <place xml:id="Paris" type="ville">
+                  <placeName>
+                     <country>France</country>
+                     <settlement type="ville">Paris</settlement>
+                     <name>Paris</name>
+                  </placeName>
+               </place>
+               <place xml:id="Saint_Germain" type="faubourg">
+                  <placeName>
+                     <country>France</country>
+                     <settlement type="ville">Paris</settlement>
+                     <district type="arrondissement" n="7">7ème</district>
+                     <name>Saint-Germain</name>
+                  </placeName>
+               </place>
+               <place xml:id="Provence" type="province">
+                  <placeName>
+                     <country>France</country>
+                     <settlement type="province">Provence</settlement>
+                     <name>Provence</name>
+                  </placeName>
+               </place>
+               <place xml:id="Bourgogne" type="province">
+                  <placeName>
+                     <country>France</country>
+                     <settlement type="province">Bourgogne</settlement>
+                     <name>Bourgogne</name>
+                  </placeName>
+               </place>
+               <place xml:id="H_Guienne" type="province">
+                  <placeName>
+                     <country>France</country>
+                     <settlement type="province">Haute-Guienne</settlement>
+                     <name>Haute-Guienne</name>
+                  </placeName>
+               </place>
+               <place xml:id="theatre_Marais" type="théâtre">
+                  <placeName>
+                     <country>France</country>
+                     <settlement type="ville">Paris</settlement>
+                     <district type="arrondissement" n="3">3ème</district>
+                     <district type="arrondissement" n="4">4ème</district>
+                     <name>Théâtre du Marais</name>
+                  </placeName>
+               </place>
+               <place xml:id="hotel_Bourgogne" type="théâtre">
+                  <placeName>
+                     <country>France</country>
+                     <settlement type="ville">Paris</settlement>
+                     <district type="arrondissement" n="2">2ème</district>
+                     <name>Hôtel de Bourgogne</name>
+                  </placeName>
+               </place>
+               <place xml:id="hopital_charite" type="hopital">
+                  <placeName>
+                     <country>France</country>
+                     <settlement type="ville">Paris</settlement>
+                     <district type="arrondissement" n="6">6ème</district>
+                     <district type="adresse">45 rue des Saints-Pères</district>
+                     <name>Hôpital de la Charité</name>
+                  </placeName>
+               </place>
+               <place xml:id="rue_Saints_Peres" type="rue">
+                  <placeName>
+                     <country>France</country>
+                     <settlement type="ville">Paris</settlement>
+                     <district type="arrondissement" n="6">6ème</district>
+                     <name>Rue des Saints-Pères</name>
+                  </placeName>
+               </place>
+               <place xml:id="Joigny" type="ville">
+                  <placeName>
+                     <country>France</country>
+                     <settlement type="ville">Joigny</settlement>
+                     <name>Joigny</name>
+                  </placeName>
+               </place>
+            </listPlace>
+         </settingDesc>
+         <particDesc>
+            <listPerson type="Sevigne_family">
+               <person sex="femme" xml:id="de_Grignan">
+
+                  <persName>
+                     <surname>Grignan</surname>
+                     <nameLink>de</nameLink>
+                     <roleName>comtesse</roleName>
+                  </persName>
+               </person>
+               <person sex="homme" xml:id="C_Sevigne">
+
+                  <persName>
+                     <forename>Charles</forename>
+                     <surname>Sévigné</surname>
+                     <nameLink>de</nameLink>
+                     <roleName>comte</roleName>
+                  </persName>
+               </person>
+               <person sex="femme" xml:id="MB_de_Grignan">
+                  <persName>
+                     <forename>Marie-Blanche</forename>
+                     <surname>Grignan</surname>
+                     <nameLink>de</nameLink>
+                  </persName>
+               </person>
+
+               <listRelation>
+                  <relation name="parent_child" active="#Sevigne" passive="#de_Grignan"/>
+                  <relation name="parent_child" active="#Sevigne" passive="#C_Sevigne"/>
+                  <relation name="parent_child" active="#de_Grignan" passive="#MB_de_Grignan"/>
+                  <relation name="grandmother_granddaughter" active="#Sevigne"
+                     passive="#MB_de_Grignan"/>
+               </listRelation>
+            </listPerson>
+
+            <listPerson type="King">
+               <person sex="homme" xml:id="Louis_XIV">
+                  <persName>
+                     <forename>Louis</forename>
+                     <surname>Bourbon</surname>
+                     <nameLink>de</nameLink>
+                     <genName>XIV</genName>
+                     <roleName>roi de France</roleName>
+                  </persName>
+                  <birth><date when="1638-09-05"/>5 septembre 1638</birth>
+                  <death><date when="1715-09-01">1er septembre 1715</date></death>
+               </person>
+               <person sex="femme" xml:id="Marie-Therese_d_Autriche">
+                  <persName>
+                     <forename>Marie-Thérèse</forename>
+                     <surname>Autriche</surname>
+                     <nameLink>d'</nameLink>
+                     <roleName>reine de France</roleName>
+                  </persName>
+                  <occupation>Reine de France</occupation>
+                  <birth><date when="1638-09-20">20 septembre 1638</date></birth>
+                  <death><date when="1683-07-30">30 juillet 1683</date></death>
+                  <sex value="F"/>
+               </person>
+               <person xml:id="Catherine_de_Medicis">
+                  <persName>
+                     <forename>Catherine</forename>
+                     <surname>Médécis</surname>
+                     <nameLink>de</nameLink>
+                     <roleName>reine de France</roleName>
+                  </persName>
+                  <birth><date when="1519-04-13"/>13 avril 1519</birth>
+                  <death><date when="1589-01-05">5 janvier 1589</date></death>
+               </person>
+               <listRelation>
+                  <relation name="married_couple" mutual="#Louis_XIV #Marie-Therese_d_Autriche"/>
+               </listRelation>
+            </listPerson>
+
+            <listPerson type="OthersPersons">
+               <person sex="femme" xml:id="de_Nevers">
+                  <persName>
+                     <surname>Nevers</surname>
+                     <nameLink>de</nameLink>
+                  </persName>
+               </person>
+               <person sex="femme" xml:id="Martin">
+                  <persName>
+                     <surname>Martin</surname>
+                  </persName>
+                  <occupation>coiffeuse</occupation>
+               </person>
+               <person sex="femme" xml:id="de_Sully">
+                  <persName>
+                     <surname>Sully</surname>
+                     <nameLink>de</nameLink>
+                     <roleName>duchesse</roleName>
+                  </persName>
+               </person>
+               <person sex="femme" xml:id="Guiche">
+                  <persName>
+                     <surname>Guiche</surname>
+                     <nameLink>de</nameLink>
+                     <roleName>duchesse</roleName>
+                  </persName>
+               </person>
+               <person xml:id="Trochanire">
+                  <persName>
+                     <surname>La Troche</surname>
+                     <nameLink>de</nameLink>
+                  </persName>
+               </person>
+               <person sex="femmme" xml:id="Montgobert">
+                  <persName>
+                     <surname>Montgobert</surname>
+                  </persName>
+                  <occupation>dame de compagnie de <persName ref="#de_Grignan">Madame de
+                        Grignan</persName></occupation>
+               </person>
+               <person sex="homme" xml:id="La_Vienne">
+                  <persName>
+                     <surname>La Vienne</surname>
+                  </persName>
+                  <occupation>valet-de-chambre</occupation>
+                  <occupation>coiffeur</occupation>
+               </person>
+               <person sex="femme" xml:id="Lavalliere">
+                  <persName>
+                     <surname>Lavallière</surname>
+                     <nameLink>de</nameLink>
+                     <addName>mademoiselle</addName>
+                  </persName>
+               </person>
+
+               <person sex="homme" xml:id="Saint_Simon">
+                  <persName>
+                     <forename>Claude-Henri</forename>
+                     <surname>Rouvroy de Saint-Simon</surname>
+                     <nameLink>de</nameLink>
+                  </persName>
+                  <occupation>philosophe</occupation>
+                  <bibl><title>Mémoires, tome III</title></bibl>
+               </person>
+               <person sex="femme" xml:id="La_borde">
+                  <persName>
+                     <surname>La Borde</surname>
+                     <nameLink>de</nameLink>
+                     <addName>mademoiselle</addName>
+                  </persName>
+               </person>
+               <person sex="femme" xml:id="de_Crussol">
+                  <persName>
+                     <surname>Crussol</surname>
+                     <nameLink>de</nameLink>
+                  </persName>
+               </person>
+               <person sex="homme" xml:id="Montausier">
+                  <persName>
+                     <surname>Montausier</surname>
+                     <nameLink>de</nameLink>
+                     <roleName>duc</roleName>
+                  </persName>
+               </person>
+               <person sex="femme" xml:id="de_Montespan">
+                  <persName>
+                     <surname>Montespan</surname>
+                     <nameLink>de</nameLink>
+                  </persName>
+               </person>
+               <person sex="femme" xml:id="Thianges">
+                  <persName>
+                     <surname>Thianges</surname>
+                     <nameLink>de</nameLink>
+                  </persName>
+               </person>
+               <person sex="femme" xml:id="de_Soubise">
+                  <persName>
+                     <surname>Soubise</surname>
+                     <nameLink>de</nameLink>
+                  </persName>
+               </person>
+               <person sex="femme" xml:id="de_Fiesque_f">
+                  <persName>
+                     <surname>Fiesque</surname>
+                     <nameLink>de</nameLink>
+                     <roleName>comtesse</roleName>
+                  </persName>
+               </person>
+               <person sex="femme" xml:id="Fayette">
+                  <persName>
+                     <surname>La Fayette</surname>
+                     <nameLink>de</nameLink>
+                  </persName>
+               </person>
+               <person sex="femme" xml:id="Marans">
+                  <persName>
+                     <surname>Marans</surname>
+                     <nameLink>de</nameLink>
+                  </persName>
+               </person>
+               <person sex="homme" xml:id="Marseille">
+                  <persName>
+                     <surname>Marseille</surname>
+                     <nameLink>de</nameLink>
+                  </persName>
+               </person>
+               <person sex="homme" xml:id="de_Fiesque_h">
+                  <persName>
+                     <surname>Fiesque</surname>
+                     <nameLink>de</nameLink>
+                     <roleName>comte</roleName>
+                  </persName>
+               </person>
+               <person sex="homme" xml:id="Ambres">
+                  <persName>
+                     <surname>Ambres</surname>
+                     <nameLink>d'</nameLink>
+                  </persName>
+               </person>
+               <person sex="femme" xml:id="Ninon">
+                  <persName>
+                     <forename>Anne</forename>
+                     <surname>Lanclos</surname>
+                     <nameLink>de</nameLink>
+                     <addName>Ninon</addName>
+                  </persName>
+               </person>
+               <person sex="femme" xml:id="Champmesle_f">
+                  <persName>
+                     <surname>Desmares</surname>
+                     <forename>Marie</forename>
+                     <addName>la Champmeslé</addName>
+                  </persName>
+                  <occupation>actrice</occupation>
+               </person>
+               <person sex="homme" xml:id="Champmesle_h">
+                  <persName>
+                     <surname>Chevillet</surname>
+                     <forename>Charles</forename>
+                     <addName>Monsieur de Champsmelé</addName>
+                  </persName>
+                  <occupation>acteur</occupation>
+               </person>
+               <person sex="homme" xml:id="Moliere">
+                  <persName>
+                     <surname>Poquelin</surname>
+                     <forename>Jean-Baptiste</forename>
+                     <addName>Molière</addName>
+                  </persName>
+                  <occupation>dramaturge</occupation>
+                  <occupation>acteur</occupation>
+               </person>
+               <person sex="homme" xml:id="Tacite">
+                  <persName>
+                     <surname>Publius</surname>
+                     <forename>Tacitus</forename>
+                     <addName>Tacite</addName>
+                  </persName>
+                  <occupation>historien</occupation>
+                  <occupation>sénateur</occupation>
+               </person>
+               <person sex="homme" xml:id="ABenoit">
+                  <persName>
+                     <forename>Antoine</forename>
+                     <surname>Benoît</surname>
+                     <addName>Benoît du Cercle</addName>
+                  </persName>
+                  <occupation>peintre</occupation>
+                  <occupation>sculpteur</occupation>
+               </person>
+               <person sex="homme" xml:id="Claude_Bernard">
+                  <persName>
+                     <forename>Claude</forename>
+                     <surname>Bernard</surname>
+                     <addName>le pauvre prêtre</addName>
+                  </persName>
+                  <occupation>prêtre</occupation>
+               </person>
+               <listRelation>
+                  <relation name="married_couple" mutual="#de_Fiesque_f #de_Fiesque_h"
+                     type="second_marriage"/>
+                  <relation name="married_couple" mutual="#Champmesle_f #Champmesle_h"
+                     type="second_marriage"/>
+                  <relation name="parent_child" active="#Montausier" passive="#de_Crussol"/>
+               </listRelation>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:lang="fr">
+         <div type="Letter" n="142">
+            <head>LETTRE CXLII.</head>
+
+            <opener>De Madame de <persName n="sender" ref="#Sevigne">Sévigné</persName> à <persName
+                  n="recipient" ref="#de_Grignan">Madame de Grignan</persName>. <dateline>A
+                     <placeName ref="#Paris">Paris</placeName>, samedi <date when="1671-04-04">4
+                     avril 1671</date>.</dateline></opener>
+
+            <p>Je vous mandai l'autre jour<note place="foot" n="1" anchored="true">Voyez, la lettre
+                  du <date when="1671-03-18">18 mars 1671</date>. <emph>D. P.</emph></note> la
+               coiffure de <persName ref="#de_Nevers">madame de Nevers</persName>, et dans quel
+               excès la <persName ref="#Martin">Martin</persName> avoit poussé cette mode ; mais il
+               y a une certaine médiocrité qui m'a charmée, et qu'il faut vous apprendre, afin que
+               vous ne vous amusiez plus à faire cent petites boucles sur vos oreilles, qui sont
+               défrisées en un moment, qui siéent mal, et qui ne sont non plus à la mode
+               présentement, que la coiffure de la reine <persName ref="#Catherine_de_Médicis"
+                  >Catherine de Médicis</persName>. Je vis hier la <persName ref="#de_Sully"
+                  >duchesse de Sully</persName> et la <persName ref="#Guiche">comtesse de
+                  Guiche</persName> ; leurs têtes sont charmantes ; je suis rendue ; cette coiffure
+               est faite justement pour votre visage ; vous serez comme un ange, et cela est fait en
+               un moment. Tout ce qui me fait de la peine, c'est que cette mode, qui laisse la tête
+               découverte, me fait craindre pour les dents. Voici ce que <persName ref="#Trochanire"
+                     ><hi rend="italic">Trochanire</hi></persName>
+               <note place="foot" n="2" anchored="true">Madame de La Troche. D. P.</note>, qui vient
+               de <placeName ref="#Saint_Germain">Saint-Germain</placeName>, et moi, nous allons
+               vous faire entendre si nous pouvons. Imaginez-vous une tête partagée à la paysanne
+               jusqu'à deux doigts du bourrelet ; on coupe les cheveux de chaque côté, d'étage en
+               étage, dont on fait de grosses boucles rondes et négligées, qui ne viennent pas plus
+               bas qu'un doigt au-dessous de l'oreille ; cela fait quelque chose de fort jeune et de
+               fort joli, et comme deux gros bouquets de cheveux de chaque côté. Il ne faut pas
+               couper les cheveux trop courts ; car, comme il faut les friser <hi rend="italic"
+                  >naturellement</hi>, les boucles qui en emportent beaucoup ont attrapé plusieurs
+               dames, dont l'exemple doit faire trembler les autres. On met les rubans comme à
+               l'ordinaire, et une grosse boucle nouée entre le bourrelet et la coiffure ;
+               quelquefois on la laisse traîner jusque sur la gorge. Je ne sais si nous vous avons
+               bien représenté cette mode ; je ferai coiffer une poupée pour vous l'envoyer, et
+               puis, au bout de tout cela, je meurs de peur que vous ne vouliez point prendre toute
+               cette peine. Ce qui est vrai, c'est que la coiffure que fait <persName
+                  ref="#Montgobert">Montgobert</persName> n'est plus supportable. Du reste,
+               consultez votre paresse et vos dents ; mais ne m'empêchez pas de souhaiter que je
+               puisse vous voir coiffée ici comme les autres. Je vous vois, vous m'apparoissez, et
+               cette coiffure est faite pour vous : mais qu'elle est ridicule à certaines dames,
+               dont l'âge ou la beauté ne conviennent pas !</p>
+
+
+            <p><handShift new="#Trochanire"/><persName n="sender">Madame de La Troche</persName></p>
+
+            <p><persName ref="#Sevigne">Madame de Sévigné</persName> a voulu avoir l'avantage de
+               vous décrire cette coiffure ; mais, ma belle, c'est moi qui lui dictoit. Madame, vous
+               serez ravissante ; tout ce que je crains, c'est que vous n'ayez regret à vos cheveux.
+               Pour vous fortifier, je vous apprends que la <persName
+                  ref="#Marie-Therese_d_Autriche">reine</persName> et tout ce qu'il y a de filles et
+               de femmes qui se coiffent à <placeName ref="#Saint_Germain"
+               >Saint-Germain</placeName>, achevèrent hier de les faire couper par <persName
+                  ref="#La_Vienne">La Vienne</persName><note resp="#GDSG" place="foot" n="1"
+                  anchored="true">Baigneur ( ou barbier-étuviste, style du temps ), étoit le
+                  coiffeur des gens du monde, et devint celui de <persName ref="#Louis_XIV">Louis
+                     XIV</persName> à l'époque de ses amours avec <persName ref="#Lavalliere"
+                     >mademoiselle de Lavallière</persName> ; et comme les gens de son métier,
+                     <persName ref="#La_Vienne">La Vienne</persName> étoit bavard. Le <persName
+                     ref="#Louis_XIV">roi</persName> l'écoutoit, et savoit par lui des choses que
+                  personne ne lui auroit osé dire. C'est ce que nous apprend <persName
+                     ref="#Saint_Simon">Saint-Simon</persName>, dans ses Mémoires, tome III. Il
+                  ajoute même que <persName ref="#La_Vienne">La Vienne</persName> parvint à être un
+                  des quatre premiers valets-de-chambre du <persName ref="#Louis_XIV"
+                  >roi</persName>.</note> ; car c'est lui et <persName ref="#La_borde">mademoiselle
+                  de La Borde</persName> qui ont fait toutes les exécutions. <persName
+                  ref="#de_Crussol">Madame de Crussol</persName><note place="foot" n="2"
+                  anchored="true">Fille du <persName ref="#Montausier">duc de Montausier</persName>
+                  ; elle étoit alors âgée de 24 ans. M.</note> vint lundi à <placeName
+                  ref="#Saint_Germain">Saint-Germain</placeName>, coiffée à la mode ; elle alla au
+               coucher de la <persName ref="#Marie-Thérèse_d_Autriche">reine</persName>, et lui dit
+               : <said>Ah! Madame, votre Majesté a donc pris notre coiffure?</said>
+               <said>Votre coiffure,</said> lui répondit la <persName
+                  ref="#Marie-Therese_d_Autriche">reine</persName> : <said>je vous assure que je
+                  n'ai point voulu prendre votre coiffure ; je me suis fait couper les cheveux,
+                  parce que le <persName ref="#Louis_XIV">roi</persName> les trouve mieux ainsi,
+                  mais ce n'est point pour prendre votre coiffure.</said> On fut un peu surpris du
+               ton avec lequel la <persName ref="#Marie-Therese_d_Autriche">reine</persName> lui
+               parla. Mais voyez un peu aussi où <persName ref="#de_Crussol">madame de
+                  Crussol</persName> alloit prendre que c'étoit sa coiffure, parce que c'est celle
+               de <persName ref="#de_Montespan">madame de Montespan</persName>, de <persName
+                  ref="#de_Nevers">madame de Nevers</persName>, de la petite de <persName
+                  ref="#Thianges">Thianges</persName>, et de deux ou trois autres beautés charmantes
+               qui l'ont hasardée les premières. Je vous ai vue vingt fois prête à l'inventer ; cela
+               me fait croire que vous n'aurez point de peine à comprendre ce que nous vous en
+               écrivons.</p>
+            <p><persName ref="#de_Soubise">Madame de Soubise</persName>, qui craint pour ses dents,
+               parce qu'elle a déjà été une fois attrapée aux coiffures à la paysanne, ne s'est
+               point fait couper les cheveux ; et <persName ref="#La_borde">mademoiselle de La
+                  Borde</persName> lui a fait une coiffure qui est tout aussi bien que les autres
+               par les côtés ; mais le dessus de sa tête n'a garde d'être galant, comme celles dont
+               on voit la racine des cheveux. Enfin, Madame, il n'est question d'autre chose à
+                  <placeName ref="#Saint_Germain">Saint-Germain</placeName> ; et moi, qui ne veux
+               point me faire couper les cheveux, je suis ennuyée à la mort d'en entendre
+               parler.</p>
+
+
+            <p><handShift new="#Sevigne"/><persName n="sender">Madame de Sévigné</persName></p>
+
+            <p>Cette lettre est écrite hors d'œuvre chez <persName ref="#Trochanire"><hi
+                     rend="italic">Trochanire</hi></persName>. <persName ref="#de_Fiesque">La
+                  comtesse <hi rend="italic">( de Fiesque )</hi></persName> vous embrasse mille fois
+               ; le <persName ref="#de_Fiesque_h">comte</persName>, que j'ai vu tantôt, voudrait
+               bien en faire autant : je lui ai dit votre souvenir, et le dirai à tous ceux que je
+               trouverai en chemin.</p>
+            <p>Après tout, nous ne vous conseillons point de faire couper vos beaux cheveux ; et
+               pour qui ? bon Dieu ! Cette mode durera peu ; elle est mortelle pour les dents :
+               taponnez-vous seulement par grosses boucles, comme vous faisiez quelquefois ; car les
+               petites boucles rangées de <persName ref="#Montgobert">Montgobert</persName> sont
+               justement du temps du roi Guillemot.</p>
+         </div>
+         <div type="Letter" n="143">
+            <head>LETTRE CXLIII.</head>
+            <opener>De <persName ref="#Sevigne">Madame de Sévigné</persName> à <persName
+                  ref="#de_Grignan">Madame de Grignan</persName>. <dateline>A <placeName
+                     ref="#Paris">Paris</placeName>, mercredi <date when="1671-04-08">8 avril
+                     1671</date>.</dateline></opener>
+
+            <p>Mon Dieu, ma <persName ref="#de_Grignan">fille</persName>, que vos lettres sont
+               aimables ! il y a des endroits dignes de l'impression : un de ces jours vous
+               trouverez qu'un de vos amis vous aura trahie. Vous étiez en dévotion, vous y avez
+               trouvé nos pauvres sœurs <hi rend="italic">(de Sainte-Marie)</hi>, vous y avez votre
+               cellule : mais ne vous y creusez point trop l'esprit ; les rêveries sont quelquefois
+               si noires, qu'elles font mourir ; vous savez qu'il faut un peu glisser sur les
+               pensées : vous trouverez de la douceur dans cette maison, dont vous êtes la
+               maîtresse.</p>
+            <p>J'admire la manière de vos dames de <placeName ref="#Provence">Provence</placeName> :
+               la description que vous me faites des cérémonies est une pièce achevée : mais
+               savez-vous bien qu'elles m'échauffent le sang, et que je ne comprends pas comment
+               vous y pouvez résister? Vous croyez que je serois admirable en <placeName
+                  ref="#Provence">Provence</placeName>, et que je ferois des merveilles sur ma
+               petite boule ; point du tout, je serois brutale ; la déraison me pique, et le manque
+               de bonne foi m'offense. Je leur dirois : Mesdames, voyons donc à quoi nous en sommes
+               ; faut-il vous reconduire ? Ne m'en empêchez donc pas, et ne perdons point notre
+               temps et notre poumon : si vous ne le voulez point, trouvez bon que je n'en fasse
+               point les façons. Je ne m'étonne pas si cette sorte de manège vous impatiente, j'y
+               ferois moins bien que vous.</p>
+            <p>Parlons un peu de votre <persName ref="#C_Sevigne">frère</persName> : il a eu son
+               congé de <persName ref="#Ninon">Ninon</persName> ; elle s'est lassée d'aimer sans
+               être aimée ; elle a redemandé ses lettres, on les a rendues : j'ai été fort aise de
+               cette séparation. Je lui disois toujours un petit mot de Dieu ; je le faisois
+               souvenir de ses bons sentiments passés, et le priois de ne point étouffer le
+               Saint-Esprit dans son cœur : sans cette liberté de lui dire en passant quelque mot,
+               je n'aurois pas souffert cette confidence dont je pavois que faire. Mais ce n'est pas
+               tout : quand on rompt d'un côté, on croit se racquitter de l'autre, on se trompe. La
+               jeune <persName ref="#Champmesle_f">Merveille</persName><note resp="#GDSG"
+                  place="foot" n="1" anchored="true">Il est question ici de <persName
+                     ref="#Champmesle_f">Marie Desmares-Champmeslé</persName>, célèbre actrice, née
+                  en <date when="1641">1641</date>, morte en <date when="1698">1698</date> : elle
+                  vint à <placeName ref="#Paris">Paris</placeName> en <date when="1669">1669</date>,
+                  et débuta avec son <persName ref="#Champmesle_h">mari</persName> sur le <placeName
+                     ref="#theatre_Marais">théâtre du Marais</placeName>. A la rentrée de Pâques de
+                     <date when="1670">1670</date>, la Champmeslé et son mari entrèrent dans la
+                  troupe de l'<persName ref="#hotel_Bourgogne">hôtel de Bourgogne</persName>. Ainsi,
+                  en rapprochant toutes ces dates avec la date de la présente lettre, <date
+                     when="1671">1671</date>, il est clair que la <persName ref="#Champmesle_f"
+                     >Champmeslé</persName> devait avoir alors trente ans, et non pas vingt-sept,
+                  comme le porte l'édition des <hi rend="italic">Lettres de Madame de Sévigné</hi>,
+                     <date when="1818">1818</date>.</note> n'a pas rompu ; mais je crois qu'elle
+               rompra. Voici pourquoi mon <persName ref="#C_Sevigne">fils</persName> vint hier me
+               chercher du bout de <placeName ref="#Paris">Paris</placeName> ; il vouloit
+               m'apprendre un accident qui lui étoit arrivé. Il avoit trouvé une occasion favorable,
+               et cependant il... ce fut une chose étrange ; la <persName ref="#Champmesle_f"
+                  >demoiselle</persName> ne s'étoit jamais trouvée à telle fête : le cavalier en
+               désordre sortit en déroute, croyant être ensorcelé ; et ce qui vous paroîtra
+               plaisant, c'est qu'il mouroit d'envie de me conter sa déconvenue : nous rîmes fort ;
+               je lui dis que j'étois ravie qu'il fût puni par où il avoit péché : il s'en prit à
+               moi, et me dit que je lui avois donné de ma glace, qu'il se passeroit fort bien de
+               cette ressemblance, que j'aurois bien mieux fait de la donner à ma <persName
+                  ref="#de_Grignan">fille</persName>. Il vouloit que <hi rend="italic">Pecquet</hi>
+               le restaurât ; il disoit les plus folles choses du monde, et moi aussi : c'étoit une
+               scène digne de <persName ref="#Moliere">Molière</persName>. Ce qui est vrai, c'est
+               qu'il a l'imagination tellement bridée, que je crois qu'il n'en reviendra pas sitôt.
+               J'ai beau l'assurer que tout l'empire amoureux est rempli d'histoires tragiques, il
+               n'entend point de raison là-dessus. La petite <persName ref="#Champmesle_f"><hi
+                     rend="italic">Chimène</hi></persName> dit qu'elle voit bien qu'il ne l'aime
+               plus, et se console ailleurs. Enfin, c'est un désordre qui me fait rire, et je
+               voudrois de tout mon cœur qu'il le pût retirer d'un état si malheureux à l'égard de
+               Dieu. <persName ref="#Ninon">Ninon</persName> lui disoit l'autre jour qu'il étoit <hi
+                  rend="italic">une vraie citrouille fricassée dans de la neige</hi>. Voyez ce que
+               c'est que de voir bonne compagnie, on apprend mille gentillesses.</p>
+            <p>Votre <persName ref="#C_Sevigne">frère</persName> me contoit l'autre jour qu'un
+               comédien vouloit se marier, quoiqu'il eût un certain mal un peu dangereux ; et son
+               camarade lui dit : <said>« Hé, morbleu ! attends que tu sois guéri, tu nous perdras
+                  tous »</said> : cela me parut une jolie épigramme.</p>
+            <p>J'ai changé de nourrice pour votre <persName ref="#MB_de_Grignan">enfant</persName> ;
+               celle qu'elle avoit étoit à souhait pour sa personne ; il ne lui manquoit que du lait
+               : je lui ai donné une bonne paysanne, sans façon, de belles dents, des cheveux noirs,
+               un teint hâlé, vingt-quatre ans ; son lait a quatre mois, son enfant est beau comme
+               un ange ; vous ne me connaîtriez plus : je suis devenue une vraie commère, et cela
+               m'a acquis une grande réputation, car la petite profite à vue d'œil, et je m'en vais
+               régenter dans mon quartier.</p>
+            <p><persName ref="#Marans">Madame de Marans</persName> disoit, il y a quelques jours,
+               chez <persName ref="#Fayette">madame de La Fayette</persName> : <said><q rend="frdqo"
+                     > Ah! mon Dieu, « il faut que je me fasse couper les cheveux. </q></said>
+               Madame de La Fayette lui répondit <hi rend="italic">bonnement</hi> : <said><q
+                     rend="frdqo"> Ah! mon Dieu, <persName ref="#Marans">Madame</persName>, ne le
+                     faites point, cela ne sied bien qu'aux jeunes personnes. </q></said> Si vous
+               n'aimez ce trait-là, dites mieux.</p>
+            <p>Voilà une lettre que j'ai reçue de <persName ref="#Marseille">M. de
+                  Marseille</persName> ; je crois que ma réponse sera de votre goût, puisque vous la
+               voulez si franche et si sincère, <hi rend="italic">et conforme à cette amitié que
+                  vous vous êtes jurée, dont la dissimulation est le lien, et votre intérêt le
+                  fondement.</hi> Cette période est de <persName ref="#Tacite">Tacite</persName> ;
+               jamais je n'ai rien vu de si beau. J'entre donc dans ce sentiment, et je l'approuve.
+               Il faut lui faire croire qu'il est de nos amis, malgré qu'il en ait. Adieu, ma
+               très-aimable enfant, je ne pense qu'à vous : si, par un miracle que je n'espère, ni
+               ne veux, vous étiez hors de ma pensée, il me semble que je serois vide de tout, comme
+               une figure de Benoît <note resp="#GDSG" place="foot" n="1">On connoît deux artistes
+                  du nom de <persName ref="#ABenoit">Benoît</persName> dans le dix-septième siècle.
+                  Celui-ci excelloit dans les portraits en cire : <persName ref="#ABenoit"
+                     >il</persName> entreprit de cette manière les portraits des principaux
+                  seigneurs de la cour, dont il fit un salon d'exposition. La nouveauté de ce
+                  spectacle et la richesse des étoffes dont il ajustoit ses personnages en pied lui
+                  attiroient des curieux en foule et beaucoup d'argent. Cette singularité, qu'il ne
+                  faut pas confondre avec les productions de l'art, car elle ne montre jamais que
+                  des mannequins, personnages vides de tout, comme dit <persName ref="#MRCS">madame
+                     de Sévigné</persName>, fit donner à l'artiste le surnom de <persName
+                     ref="#ABenoit"><hi rend="italic">Benoît du Cercle</hi></persName>, tant à cause
+                  de son salon, que pour le distinguer d'<persName ref="#ABenoit">Antoine
+                     Benoît</persName>, peintre, sculpteur, auteur du tombeau de <persName
+                     ref="#Claude_Bernard">Claude Bernard</persName>, surnommé le <hi rend="italic"
+                     >pauvre prêtre</hi>, mort en odeur de sainteté en <date when="1641"
+                  >1641</date>. J'ai vu cet excellent ouvrage, en terre cuite, d'<persName
+                     ref="#ABenoit">Antoine Benoît</persName>, à l'<placeName ref="#hopital_charite"
+                     >hôpital de la Charité</placeName>, <placeName ref="#rue_Saints_Peres">rue des
+                     Saints-Pères</placeName>, à <placeName ref="#Paris">Paris</placeName>.
+                     <persName ref="#ABenoit">Benoît du Cercle</persName> étoit natif de <placeName
+                     ref="#Joigny">Joigny</placeName> en <placeName ref="#Bourgogne"
+                     >Bourgogne</placeName> ; il est mort en <date when="1704"
+               >1704</date>.</note>.</p>
+            <p><persName ref="#Ambres">M. d'Ambres</persName> donne son régiment au <persName
+                  ref="#Louis_XIV">roi</persName> pour quatre-vingt mille francs et cent vingt mille
+               livres : voilà les deux cent mille francs <note place="foot" n="2">Du prix de la
+                  charge de lieutenant-général de la <placeName ref="#H_Guienne"
+                     >Haute-Guienne</placeName>. D. P.</note>. Il est fort content d'être hors de
+               l'infanterie, c'est-à-dire, de l'hôpital.</p>
+         </div>
+      </body>
+   </text>
+</TEI>
